@@ -143,7 +143,7 @@ h3{
 
 .spacer1 {
     height: 180%;
-    margin: 0 0 -180% 0;
+    margin: 0 0 -183% 0;
 }
 
 .timestamps{
@@ -158,7 +158,7 @@ h3{
 }
 .spacer2 {
     height: 206%;
-    margin: 0 0 210% 0;
+    margin: 0 0 205% 0;
 }
 
 .locationDesc{
@@ -207,7 +207,7 @@ h3{
 
 .whiteDots{
 	position: absolute;
-	top: 124.5%;
+	top: 124.1%;
 	left: 38%
 
 }
