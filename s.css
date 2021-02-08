@@ -88,7 +88,7 @@ h3{
 
 #yellowContainer{
 	position: absolute;
-	top: 515%;
+	top: 518%;
 	height: 85%;
 	width: 100%;
 	border: 1px solid #707070;
@@ -97,7 +97,7 @@ h3{
 
 #pinkContainer{
 	position: absolute;
-	top: 605%;
+	top: 608%;
 	height: 85%;
 	width: 100%;
 	border: 1px solid #707070;
@@ -141,9 +141,8 @@ h3{
 	text-align: center;
 }
 
-.spacer1 {
-    height: 180%;
-    margin: 0 0 -183% 0;
+.loc{
+	margin-bottom: 201%;
 }
 
 .timestamps{
@@ -156,9 +155,9 @@ h3{
 	word-wrap: break-word;
 	text-align: center;
 }
-.spacer2 {
-    height: 206%;
-    margin: 0 0 205% 0;
+
+.ts{
+	margin-bottom: 205%;
 }
 
 .locationDesc{
@@ -207,7 +206,7 @@ h3{
 
 .whiteDots{
 	position: absolute;
-	top: 124.1%;
+	top: 124.5%;
 	left: 38%
 
 }
@@ -218,5 +217,6 @@ h3{
 	border: 1px solid #707070;
 	border-radius: 25px;
 	background-color: white;
-	margin-bottom: 4585%;
+	margin-bottom: 4584%;
 }
+
