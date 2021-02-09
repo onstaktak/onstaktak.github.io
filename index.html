@@ -7,8 +7,7 @@
 
 <body>
 	
-	
-
+	<!-- Top navigation bar -->
 	<div id="theTop">
 		<div class="top">
 			<h4 onclick="func1()" style="cursor:pointer">HOME</h4> </button>
@@ -20,27 +19,30 @@
 			<h4 onclick="func3()" style="cursor:pointer">CREATORS</h4>
 		</div>
 	</div>
-
+	<!-- Project Title -->
 	<div id="title">
 		<h1 id="onlyTitle"> "MOVING FORWARD" <h1/>
 		<p class="title2">30-MINUTE FILM FESTIVAL</p>
 	</div>
 
+	<!-- Vertical line going through the middle of the page -->
 	<div class="verticalLine"></div>
 
+	<!-- Short description of video -->
 	<div id="intro">
 		<p class="introContent">
 		Short introduction goes here. <br/>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Sed lectus lacus, imperdiet vel arcu ut, efficitur tempus dolor. Maecenas in facilisis nisi. In viverra magna eget lacus tincidunt vulputate.
 		</p>
 	</div>
-
+	<!-- a box to contain the video -->
 	<div id="vidContainer">
 		<video id="vid" width="500"  controls poster="media/thumbnail.png">
 		  	<source src="media/30MFF.mp4" type="video/mp4">
 		</video>
 	</div>
 
+	<!-- The cointainer for the About portion of the page -->
 	<div id="yellowContainer">
 		<div class="aboutTitle"> <h1>ABOUT</h1></div>
 		<div class="aboutPhoto"><img width="450px" src="media/filmPhoto.png"></div>
@@ -48,7 +50,7 @@
 		<div class="aboutText"> <p> Description of film + anything that needs to be said about it (context, story, song choice, purpose…). <br/>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Sed lectus lacus, imperdiet vel arcu ut, efficitur tempus dolor. Maecenas in facilisis nisi. In viverra magna eget lacus tincidunt vulputate. Sed rutrum iaculis magna, non bibendum metus lacinia quis. Vestibulum efficitur, lacus quis suscipit varius, odio neque ultrices arcu, non dignissim enim elit id enim. Duis eget nisl euismod. </p></div>
 	</div>
-
+	<!-- The container for the Creators portion of the page -->
 	<div id="pinkContainer">
 		<div class="creatorsTitle"> <h1>CREATORS</h1></div>
 		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
@@ -78,6 +80,8 @@
 	
 	</div>
 
+	<!-- Side-bar navigtion -->
+	<!-- The dots/circles you can click on + location titles -->
 	<div id="dots">
 		<div class="dot activeDot" onclick="func4()" style="cursor:pointer"> <span class="nav">Home</span> </div>
 		<div class="dot" onclick="func5()" style="cursor:pointer"> <span class="nav">Kerkennah</span> </div>
@@ -86,7 +90,7 @@
 		<div class="dot" onclick="func8()" style="cursor:pointer"> <span class="nav">Sunset View</span> </div>
 		<div class="dot" onclick="func9()" style="cursor:pointer"> <span class="nav">Eiffel Tower</span> </div>
 	</div>
-
+	<!-- Portion of the website that has all the locations, pictures and descriptions -->
 	<div class="locationTitles">
 	<h3 class="loc"> Kerkennah</h3>
 	<h3 class="loc"> Dubai Frame</h3>
@@ -165,47 +169,56 @@
 		<div class="wdot"></div>
 	</div>
 
-
+	<!-- The java script code -->
 
 <script>
+	// The  top home button
 	function func1() {
 	var elmnt1 = document.getElementById("theTop");
 	elmnt1.scrollIntoView({behavior: 'smooth'});
 	}
+	// The top About button
 	function func2() {
 	var elmnt2 = document.getElementById("yellowContainer");
 	elmnt2.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
+	// The top Creators button
 	function func3() {
 	var elmnt3 = document.getElementById("pinkContainer");
 	elmnt3.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
-
+	// The side home button
 	function func4() {
 	var elmnt4 = document.getElementById("theTop");
 	elmnt4.scrollIntoView({behavior: 'smooth'});
 	}
+	// The side location 1 button
 	function func5() {
 	var elmnt5 = document.getElementById("img1");
 	elmnt5.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
+	// The side location 2 button
 	function func6() {
 	var elmnt6 = document.getElementById("img2");
 	elmnt6.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
+	// The side location 3 button
 	function func7() {
 	var elmnt7 = document.getElementById("img3");
 	elmnt7.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
+	// The side location 4 button
 	function func8() {
 	var elmnt8 = document.getElementById("img4");
 	elmnt8.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
+	// The side location 5 button
 	function func9() {
 	var elmnt9 = document.getElementById("img5");
 	elmnt9.scrollIntoView({behavior: 'smooth',block: 'center'});
 	}
 
+	//This is to change the active dot once it is clicked -it is inspired by code on w3schools- 
 	var navigation = document.getElementById("dots");
 	var allDots = navigation.getElementsByClassName("dot");
 	for (var i = 0; i < allDots.length; i++) {

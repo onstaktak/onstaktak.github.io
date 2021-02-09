@@ -9,8 +9,7 @@ html, body{
 }
 
 
-
-
+/*Top navigation bar*/
 #theTop
 {
 	width: 100%;
@@ -27,7 +26,8 @@ html, body{
 	margin-left: 50px;
 	margin-right: 50px;
 }
-
+/*==========================================*/
+/*Title*/
 #title{
 	margin-left: auto;
     margin-right: auto;
@@ -51,6 +51,7 @@ html, body{
 h3{
 	letter-spacing: 7px;
 }
+/*===========================================*/
 .verticalLine {
   border-left: 1px solid #707070;
   height: 463%;
@@ -59,7 +60,7 @@ h3{
   margin-left: -3px;
   top: 41%;
 }
-
+/*==================== VIDEO AND SHORT DESCRIPTION ==========================*/
 #intro{
 	position: absolute;
 	background-color: #D8D8D8;
@@ -92,7 +93,7 @@ h3{
 	top:5%;
 	left:3%
 }
-
+/*======================='ABOUT' PORTION OF PAGE==============================*/
 #yellowContainer{
 	position: absolute;
 	top: 510%;
@@ -132,7 +133,7 @@ h3{
 
 }
 
-
+/*========================='CREATORS' PORTION OF PAGE============================*/
 #pinkContainer{
 	position: absolute;
 	top: 600%;
@@ -202,7 +203,7 @@ h3{
 	font-size: 20px;
 	text-align: center;
 }
-
+/*=========================SIDE NAVIGATION BAR============================*/
 #dots{
 	position: fixed;
 	top: 40%;
@@ -231,7 +232,7 @@ h3{
 	white-space: nowrap;
 }
 
-	
+/*==========================LOCATIONS ===========================*/	
 
 .locationTitles{
 	width: 20%;
@@ -275,6 +276,7 @@ h3{
 	text-align: right;
 }
 
+/*a spacer to vertically space out the location descriptions*/
 .spacer3 {
     height: 125%;
     margin: 0 0 136% 0;
@@ -285,7 +287,7 @@ h3{
 	top:112%;
 	right:12%;
 }
-
+/*a spacer to vertically space out the location photos*/
 .spacer4 {
     height: 66%;
     margin: 0 0 66% 0;
