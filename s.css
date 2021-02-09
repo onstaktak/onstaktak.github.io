@@ -39,7 +39,7 @@ html, body{
 	margin-bottom: 90px;
 }
 
-h1{
+#onlyTitle{
 	letter-spacing: 10px;
 }
 h3{
@@ -47,7 +47,7 @@ h3{
 }
 .verticalLine {
   border-left: 1px solid #707070;
-  height: 470%;
+  height: 463%;
   position: absolute;
   left: 50%;
   margin-left: -3px;
@@ -88,23 +88,92 @@ h3{
 
 #yellowContainer{
 	position: absolute;
-	top: 518%;
+	top: 510%;
 	height: 85%;
 	width: 100%;
 	border: 1px solid #707070;
 	background-color: #FEFFF5;
 }
 
+.aboutTitle{
+	font-family: Helvetica Neue;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 3%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.aboutPhoto{
+	margin-top: 5%;
+	margin-left: 15%;
+}
+
+.aboutText{
+	width: 35%;
+	position: absolute;
+	left: 53%;
+	top: 32%;
+	font-family: Helvetica Neue;
+	font-size: 18px;
+
+}
+
+
 #pinkContainer{
 	position: absolute;
-	top: 608%;
+	top: 600%;
 	height: 85%;
 	width: 100%;
 	border: 1px solid #707070;
 	background-color: rgb(245,218,232,.58);
 }
 
-.dots{
+.creatorsTitle{
+	font-family: Helvetica Neue;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 3%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.creatorsPhoto{
+	display: inline-block;
+	margin-top: 2.5%;
+	margin-left: 16.4%;
+	width: 10%;
+
+}
+.creatorsText1{
+	display: inline-block;
+	margin-top: 1%;
+	margin-left: 15%;
+	width: 16%;
+	font-family: Helvetica Neue;
+	font-size: 20px;
+	text-align: center;
+}
+.creatorsText2{
+	display: inline-block;
+	margin-top: 1%;
+	margin-left: 11.5%;
+	width: 16%;
+	font-family: Helvetica Neue;
+	font-size: 20px;
+	text-align: center;
+}
+.creatorsText3{
+	display: inline-block;
+	margin-top: 1%;
+	margin-left: 10%;
+	width: 16%;
+	font-family: Helvetica Neue;
+	font-size: 20px;
+	text-align: center;
+}
+
+#dots{
 	position: fixed;
 	top: 40%;
 }
@@ -116,18 +185,23 @@ h3{
 	margin-left: 400%;
 	margin-bottom: 52%;
 }
-.words{
-	position: fixed;
-	top: 40%;
+
+span{display: none;}
+
+.activeDot, .dot:hover{
+	background-color: #8B8B8B;
 }
 
-.word {
+.dot:hover span{
+	display: block;
 	font-family: Helvetica Neue;
 	font-size: 14px;
-	margin-left: 145%;
+	margin-left: 200%;
 	margin-bottom: 13%;
 	white-space: nowrap;
 }
+
+	
 
 .locationTitles{
 	width: 20%;
@@ -191,7 +265,6 @@ h3{
 
 
 .horizontalLines{
-	position: relative;
 	margin-top: 44%;
 
 }
@@ -206,7 +279,7 @@ h3{
 
 .whiteDots{
 	position: absolute;
-	top: 124.5%;
+	top: 124.3%;
 	left: 38%
 
 }
@@ -219,4 +292,3 @@ h3{
 	background-color: white;
 	margin-bottom: 4584%;
 }
-

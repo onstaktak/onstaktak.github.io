@@ -10,18 +10,18 @@
 
 	<div id="theTop">
 		<div class="top">
-			<h4>HOME</h4>
+			<h4 onclick="func1()" style="cursor:pointer">HOME</h4> </button>
 		</div>
 		<div class="top">
-			<h4>ABOUT</h4>
+			<h4 onclick="func2()" style="cursor:pointer">ABOUT</h4>
 		</div>
 		<div class="top">
-			<h4>CREATORS</h4>
+			<h4 onclick="func3()" style="cursor:pointer">CREATORS</h4>
 		</div>
 	</div>
 
 	<div id="title">
-		<h1> "TITLE" <h1/>
+		<h1 id="onlyTitle"> "TITLE" <h1/>
 		<h2>30-MINUTE FILM FESTIVAL</h2>
 	</div>
 
@@ -41,29 +41,45 @@
 	</div>
 
 	<div id="yellowContainer">
-		
+		<div class="aboutTitle"> <h1>ABOUT</h1></div>
+		<div class="aboutPhoto"><img width="450px" src="media/filmPhoto.png"></div>
+		<div class="aboutText"> <p> Description of film + anything that needs to be said about it (context, story, song choice, purpose…). <br/>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Sed lectus lacus, imperdiet vel arcu ut, efficitur tempus dolor. Maecenas in facilisis nisi. In viverra magna eget lacus tincidunt vulputate. Sed rutrum iaculis magna, non bibendum metus lacinia quis. Vestibulum efficitur, lacus quis suscipit varius, odio neque ultrices arcu, non dignissim enim elit id enim. Duis eget nisl euismod. </p></div>
 	</div>
 
 	<div id="pinkContainer">
+		<div class="creatorsTitle"> <h1>CREATORS</h1></div>
+		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
+		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
+		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
+		<div class="creatorsText1">
+			<p>Joseph Hong <br/>
+				NYUAD class of 2023  <br/>
+				Contact: jhh508@nyu.edu
+			</p>
+		</div>
+		<div class="creatorsText2">
+			<p>Ons Taktak <br/>
+				NYUAD class of 2023  <br/>
+				Contact: ot503@nyu.edu 
+			</p>
+		</div>
+		<div class="creatorsText3">
+			<p>First LastName <br/>
+				NYUAD class of 2024 <br/>
+				idk???@nyu.edu
+			</p>
+		</div>
 	
 	</div>
 
-	<div class="dots">
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-	</div>
-
-	<div class="words">
-		<div class="word">Home</div>
-		<div class="word">Location 1</div>
-		<div class="word">Location 2</div>
-		<div class="word">Location 3</div>
-		<div class="word">Location 4</div>
-		<div class="word">Location 5</div>
+	<div id="dots">
+		<div class="dot activeDot" onclick="func4()" style="cursor:pointer"> <span>Home</span> </div>
+		<div class="dot" onclick="func5()" style="cursor:pointer"> <span>Location 1</span> </div>
+		<div class="dot" onclick="func6()" style="cursor:pointer"> <span>Location 2</span> </div>
+		<div class="dot" onclick="func7()" style="cursor:pointer"> <span>Location 3</span> </div>
+		<div class="dot" onclick="func8()" style="cursor:pointer"> <span>Location 4</span> </div>
+		<div class="dot" onclick="func9()" style="cursor:pointer"> <span>Location 5</span> </div>
 	</div>
 
 	<div class="locationTitles">
@@ -105,15 +121,15 @@
 	</div>
 
 	<div class="locPhotos">
-		<img width="450px" src="media/locPhoto.png">
+		<img id="img1" width="450px" src="media/locPhoto.png">
 		<div class="spacer4"></div>
-		<img width="450px" src="media/locPhoto.png">
+		<img id="img2" width="450px" src="media/locPhoto.png">
 		<div class="spacer4"></div>
-		<img width="450px" src="media/locPhoto.png">
+		<img id="img3" width="450px" src="media/locPhoto.png">
 		<div class="spacer4"></div>
-		<img width="450px" src="media/locPhoto.png">
+		<img id="img4" width="450px" src="media/locPhoto.png">
 		<div class="spacer4"></div>
-		<img width="450px" src="media/locPhoto.png">
+		<img id="img5" width="450px" src="media/locPhoto.png">
 	</div>
 
 	<div class="horizontalLines">
@@ -134,7 +150,56 @@
 
 
 
+<script>
+	function func1() {
+	var elmnt1 = document.getElementById("theTop");
+	elmnt1.scrollIntoView({behavior: 'smooth'});
+	}
+	function func2() {
+	var elmnt2 = document.getElementById("yellowContainer");
+	elmnt2.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+	function func3() {
+	var elmnt3 = document.getElementById("pinkContainer");
+	elmnt3.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
 
+	function func4() {
+	var elmnt4 = document.getElementById("theTop");
+	elmnt4.scrollIntoView({behavior: 'smooth'});
+	}
+	function func5() {
+	var elmnt5 = document.getElementById("img1");
+	elmnt5.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+	function func6() {
+	var elmnt6 = document.getElementById("img2");
+	elmnt6.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+	function func7() {
+	var elmnt7 = document.getElementById("img3");
+	elmnt7.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+	function func8() {
+	var elmnt8 = document.getElementById("img4");
+	elmnt8.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+	function func9() {
+	var elmnt9 = document.getElementById("img5");
+	elmnt9.scrollIntoView({behavior: 'smooth',block: 'center'});
+	}
+
+	var navigation = document.getElementById("dots");
+	var allDots = navigation.getElementsByClassName("dot");
+	for (var i = 0; i < allDots.length; i++) {
+	  allDots[i].addEventListener("click", function() {
+	  var thisDot = document.getElementsByClassName("activeDot");
+	  thisDot[0].className = thisDot[0].className.replace(" activeDot", "");
+	  this.className += " activeDot";
+	  });
+	}
+
+</script>
 
 
 	
