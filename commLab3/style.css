@@ -1,0 +1,354 @@
+
+/*============== Website Slideshow =================*/
+/*We got this from from w3 schools and edited it slightly*/
+*{
+  box-sizing: border-box
+}
+body{
+  font-family: Verdana, sans-serif; 
+  margin:0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slides{
+  display: none
+}
+img{
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container{
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Next & previous buttons */
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -26px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(255,255,255,0.6);
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+  background-color: rgb(93,93,93);
+}
+
+/* The text */
+.text{
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots */
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*backgrounds*/
+.img1{
+  width:100%;
+  height:680px;
+  background-color: black;
+}
+
+.img2{
+	width:100%;
+  height:680px;
+  background-color: black;
+}
+.img3{
+	width:100%;
+  height:680px;
+  background-color: rgba(0,0,0,0);
+}
+/*p5.js audio container*/
+#container{
+  position: absolute;
+  top: 5%;
+  left: 15%;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*============== Scene 3 style =================*/
+.container3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:680px;
+  z-index: -3;
+}
+
+.slide {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 80%;
+  height:80%;
+}
+
+.tv{
+    width: 100%;
+    height:110%;
+}
+
+.noise {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  width:80%;
+  height:100%;
+  z-index: -1;
+  top: 50px; left: 0; bottom: 0; right: 0;
+}
+
+.blood {
+  display: none;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.square {
+  height: 20%;
+    width: 13%;
+    background: black;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+      position: absolute;
+      margin: auto;
+        top: 0; left: 73%; bottom: 50%; right: 0;
+         opacity: 20%;
+}
+
+.square:hover{
+  box-shadow: inset 1000px 0 0 0 white;
+  cursor: pointer;
+  color: black;
+}
+
+.images {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  width:80%;
+  height:83%;
+  z-index: -1;
+  top: 0; left: 0; bottom: 0; right: 20px;
+}
+
+.table {
+position:absolute;
+top: 50%;
+z-index: -2;
+}
+
+/*============== Scene 2 style =================*/
+
+#bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:680px;
+  isolation: isolate;
+}
+
+#dust{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:680px;
+  mix-blend-mode: soft-light;
+  opacity: 0.65;
+}
+
+#window{
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  width: 22%;
+}
+
+#window:hover{
+  cursor: pointer;
+}
+
+#lightbulb{
+  position: absolute;
+  top: -1%;
+  left: 33%;
+  width: 2.7%;
+}
+#lightbulb:hover{
+  cursor: pointer;
+}
+
+#framedPhoto{
+  position: absolute;
+  top: 18%;
+  left: 41%;
+  width: 5.5%;
+}
+#framedPhoto:hover{
+  cursor: pointer;
+}
+
+#notebook{
+  position: absolute;
+  top: 46%;
+  left: 44%;
+  width: 4%;
+}
+#notebook:hover{
+  cursor: pointer;
+}
+
+#bulletHoles{
+  position: absolute;
+  top: 4%;
+  left: 61%;
+  width: 11.2%;
+}
+#bulletHoles:hover{
+  cursor: pointer;
+}
+
+#door{
+  position: absolute;
+  top: 5%;
+  left: 74%;
+  width: 14%;
+}
+#door:hover{
+  cursor: pointer;
+}
+
+#lightSwitch{
+  position: absolute;
+  top: 30%;
+  left: 90.8%;
+  width: 2%;
+}
+#lightSwitch:hover{
+  cursor: pointer;
+}
+
+#footsteps{
+  position: absolute;
+  top: 81%;
+  left: 58%;
+  width: 15.5%;
+}
+#footsteps:hover{
+  cursor: pointer;
+}
+
+#rope{
+  position: absolute;
+  top: 76%;
+  left: 75%;
+  width: 25%;
+}
+#rope:hover{
+  cursor: pointer;
+}
+
+#laptop{
+  position: absolute;
+  top: 55.5%;
+  left: 26%;
+  width: 8.5%;
+}
+#laptop:hover{
+  cursor: pointer;
+}
+
+#phone{
+  position: absolute;
+  top: 65%;
+  left: 21%;
+  width: 4.5%;
+}
+#phone:hover{
+  cursor: pointer;
+}
+
+#tissueBox{
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  width: 3%;
+}
+#tissueBox:hover{
+  cursor: pointer;
+}
+
+#sheetMusic{
+  position: absolute;
+  top: 85%;
+  left: 20.5%;
+  width: 11.5%;
+}
+#sheetMusic:hover{
+  cursor: pointer;
+}
