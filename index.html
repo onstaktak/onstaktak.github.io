@@ -1,237 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>30MFFwebsite</title>
-	<link rel="stylesheet" type="text/css" href="s.css">
+	<title>Jennifer's Wrath</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/addons/p5.sound.min.js" type="text/javascript"></script>
 </head>
-
 <body>
-	
-	<!-- Top navigation bar -->
-	<div id="theTop">
-		<div class="top">
-			<h4 onclick="func1()" style="cursor:pointer">HOME</h4> </button>
+
+	<!-- Website container -->
+	<div class="slideshow-container">
+
+		<!-- Slide 1 -->
+		<div class="slides fade">
+			<div class="img1"></div>
+			<div id="container"></div>  <!-- p5.js audio container -->
+			<div class="text">  911  </div>
 		</div>
-		<div class="top">
-			<h4 onclick="func2()" style="cursor:pointer">ABOUT</h4>
+		<!-- Slide 2 -->
+		<div class="slides fade">
+			<div class="img2"></div>
+				<div> 
+					<img id="bg" src="scene2/bg.png"> <!-- background image -->
+					<div>
+						<img id="dust" src="scene2/dustTexture.jpg"> <!-- dust filter -->
+					</div>
+				</div>
+				<!-- All clickable elements  + onclick functions to trigger the sounds -->
+				<img id="window" src="scene2/window.png" onclick="playWindow()">
+				<img id="lightbulb" src="scene2/lightbulb.png" onclick="playbulb()">
+				<img id="framedPhoto" src="scene2/framedPhoto.png" onclick="playboyfriend()">
+				<img id="notebook" src="scene2/notebook.png" onclick="playnotebook()">
+				<img id="bulletHoles" src="scene2/bulletHoles.png" onclick="playbullet()">
+				<img id="door" src="scene2/door.png" onclick="playdoor()">
+				<img id="lightSwitch" src="scene2/lightSwitch.png" onclick="playswitch()">
+				<img id="footsteps" src="scene2/footsteps.png" onclick="playrun()">
+				<img id="rope" src="scene2/rope.png" onclick="playrope()">
+				<img id="laptop" src="scene2/laptop.png" onclick="playdiploma()">
+				<img id="phone" src="scene2/phone.png" onclick="playtexts()">
+				<img id="tissueBox" src="scene2/tissueBox.png" onclick="playtissue()">
+				<img id="sheetMusic" src="scene2/sheetMusic.png" onclick="playpiano()">
+			<div class="text"> Click around to explore Jennifer's Room </div>
 		</div>
-		<div class="top">
-			<h4 onclick="func3()" style="cursor:pointer">CREATORS</h4>
+		<!-- Slide 3 -->
+		<div class="slides fade">
+			<div class="img3"></div>
+			<div class="text"> Turn on the Tv</div>
+			<img class="container3" src="media/Scene3.png">
+			<div>
+				<div class = "slide">
+					<img class = "tv" src = "media/tv.png">
+					<img class = "noise" src = "slideshow/image1.jpg">
+					<img class = "images" src = "slideshow/image1.jpg" id = "image">
+					<div class = "square" id = "nextbutton" onmousedown="news.play()"> </div>
+				</div>
+			<img class = "table" src = "media/table.png" width = 100% height = 50%>
+			</div>
 		</div>
-	</div>
-	<!-- Project Title -->
-	<div id="title">
-		<h1 id="onlyTitle"> "MOVING FORWARD" <h1/>
-		<p class="title2">30-MINUTE FILM FESTIVAL</p>
-	</div>
+		
+		<!-- Next and previous arrows -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-	<!-- Vertical line going through the middle of the page -->
-	<div class="verticalLine"></div>
-
-	<!-- Short description of video -->
-	<div id="intro">
-		<p class="introContent">
-		You get 30 minutes to film and 30 minutes to edit. </br>
-		This.. is our take. To the sound of Queen’s “Don’t Stop Me Now”, and through shots that move from the left to the right side of the screen, this video attempts to remind us of the importance of moving forward.
-
-		</p>
 	</div>
-	<!-- a box to contain the video -->
-	<div id="vidContainer">
-		<video id="vid" width="500"  controls poster="media/thumbnail.png">
-		  	<source src="media/30MFF.mp4" type="video/mp4">
-		</video>
+	<!-- Dots on bottom of the screen -->
+	<br>
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span> 
 	</div>
 
-	<!-- The cointainer for the About portion of the page -->
-	<div id="yellowContainer">
-		<div class="aboutTitle"> <h1>ABOUT</h1></div>
-		<div class="aboutPhoto"><img width="450px" src="media/filmPhoto.png"></div>
-		<div id="ap"><img width="410px" src="media/film.jpg"></div>
-		<div class="aboutText"> <p> The 30MFF requires you to come up with a concept for a video, film it and edit it, all in one hour. </br> The idea for our contribution to the festival came along when we noticed  that we had a number of clips that had a lot of movement in a specific direction. So, we chose the ones that encapsulated our idea the best, put them together in chronological order from day to night and thus was created “Moving Forward”. Although it may not be apparent, the film is meant to symbolize the journeys we go through in life and invites us to always keep going. The chorus of “Don’t Stop Me Now” by Queen adds to the message by spurring you to have fun along the way. </p></div>
-	</div>
-	<!-- The container for the Creators portion of the page -->
-	<div id="pinkContainer">
-		<div class="creatorsTitle"> <h1>CREATORS</h1></div>
-		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
-		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
-		<div class="creatorsPhoto"> <img width="200px" src="media/personPhoto.png"> </div>
-		<div id="joseph"> <img width="175px" src="media/j.jpg"> </div>
-		<div id="ons"> <img width="175px" src="media/o.jpg"> </div>
-		<div id="anisiia"> <img width="175px" src="media/a.jpg"> </div>
-		<div class="creatorsText1">
-			<p>Joseph Hong <br/>
-				NYUAD class of 2023  <br/>
-				<span style="text-decoration: underline;"> Contact: jhh508@nyu.edu </span>
-			</p>
-		</div>
-		<div class="creatorsText2">
-			<p>Ons Taktak <br/>
-				NYUAD class of 2023  <br/>
-				<span style="text-decoration: underline;"> Contact: ot503@nyu.edu </span>
-			</p>
-		</div>
-		<div class="creatorsText3">
-			<p>Anisiia Rokachova <br/>
-				NYUAD class of 2024 <br/>
-				<span style="text-decoration: underline;"> Contact: ar6547@nyu.edu </span>
-			</p>
-		</div>
-	
-	</div>
-
-	<!-- Side-bar navigtion -->
-	<!-- The dots/circles you can click on + location titles -->
-	<div id="dots">
-		<div class="dot activeDot" onclick="func4()" style="cursor:pointer"> <span class="nav">Home</span> </div>
-		<div class="dot" onclick="func5()" style="cursor:pointer"> <span class="nav">Kerkennah</span> </div>
-		<div class="dot" onclick="func6()" style="cursor:pointer"> <span class="nav"> Dubai Frame</span> </div>
-		<div class="dot" onclick="func7()" style="cursor:pointer"> <span class="nav">Rainy Bizerte</span> </div>
-		<div class="dot" onclick="func8()" style="cursor:pointer"> <span class="nav">Sunset View</span> </div>
-		<div class="dot" onclick="func9()" style="cursor:pointer"> <span class="nav">Eiffel Tower</span> </div>
-	</div>
-	<!-- Portion of the website that has all the locations, pictures and descriptions -->
-	<div class="locationTitles">
-	<h3 class="loc"> Kerkennah</h3>
-	<h3 class="loc"> Dubai Frame</h3>
-	<h3 class="loc"> Rainy Bizerte</h3>
-	<h3 class="loc"> Sunset View</h3>
-	<h3 class="loc"> Eiffel Tower</h3>
-	</div>
-
-	<div class="timestamps">
-		<h5 class="ts">at 00:06</h5>
-		<h5 class="ts">at 00:10</h5>
-		<h5 class="ts">at 00:14</h5>
-		<h5 class="ts">at 00:17</h5>
-		<h5 class="ts">at 00:27</h5>
-	</div>
-
-	<div class="locationDesc">
-		<p> Description of location. <br/>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Etiam at faucibus nulla.Etiam at faucibus nulla.
-		</p>
-		<div class="spacer3"></div>
-		<p> Description of location. <br/>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Etiam at faucibus nulla.Etiam at faucibus nulla.
-		</p>
-		<div class="spacer3"></div>
-		<p> Description of location. <br/>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Etiam at faucibus nulla.Etiam at faucibus nulla.
-		</p>
-		<div class="spacer3"></div>
-		<p> Description of location. <br/>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Etiam at faucibus nulla.Etiam at faucibus nulla.
-		</p>
-		<div class="spacer3"></div>
-		<p> Description of location. <br/>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget erat nec sapien porttitor lobortis a et ex. Etiam at faucibus nulla. Etiam at faucibus nulla.Etiam at faucibus nulla.
-		</p>
-	</div>
-
-	<div class="locPhotos">
-		<img id="img1" width="450px" src="media/locPhoto.png">
-		<img id="loc1" width="400px" src="media/loc1.jpg">
-	
-		<div class="spacer4"></div>
-
-		<img id="img2" width="450px" src="media/locPhoto.png">
-		<img id="loc2" width="400px" src="media/loc2.png">
-
-		<div class="spacer4"></div>
-
-		<img id="img3" width="450px" src="media/locPhoto.png">
-		<img id="loc3" width="400px" src="media/loc3.png">
-
-		<div class="spacer4"></div>
-
-		<img id="img4" width="450px" src="media/locPhoto.png">
-		<img id="loc4" width="400px" src="media/loc4.png">
-
-		<div class="spacer4"></div>
-		<img id="img5" width="450px" src="media/locPhoto.png">
-		<img id="loc5" width="400px" src="media/loc5.png">
-	</div>
-
-	<div class="horizontalLines">
-		<div class="hline"></div>
-		<div class="hline"></div>
-		<div class="hline"></div>
-		<div class="hline"></div>
-		<div class="hline"></div>
-	</div>
-
-	<div class="whiteDots">
-		<div class="wdot"></div>
-		<div class="wdot"></div>
-		<div class="wdot"></div>
-		<div class="wdot"></div>
-		<div class="wdot"></div>
-	</div>
-
-	<!-- The java script code -->
-
-<script>
-	// The  top home button
-	function func1() {
-	var elmnt1 = document.getElementById("theTop");
-	elmnt1.scrollIntoView({behavior: 'smooth'});
-	}
-	// The top About button
-	function func2() {
-	var elmnt2 = document.getElementById("yellowContainer");
-	elmnt2.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The top Creators button
-	function func3() {
-	var elmnt3 = document.getElementById("pinkContainer");
-	elmnt3.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The side home button
-	function func4() {
-	var elmnt4 = document.getElementById("theTop");
-	elmnt4.scrollIntoView({behavior: 'smooth'});
-	}
-	// The side location 1 button
-	function func5() {
-	var elmnt5 = document.getElementById("img1");
-	elmnt5.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The side location 2 button
-	function func6() {
-	var elmnt6 = document.getElementById("img2");
-	elmnt6.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The side location 3 button
-	function func7() {
-	var elmnt7 = document.getElementById("img3");
-	elmnt7.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The side location 4 button
-	function func8() {
-	var elmnt8 = document.getElementById("img4");
-	elmnt8.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-	// The side location 5 button
-	function func9() {
-	var elmnt9 = document.getElementById("img5");
-	elmnt9.scrollIntoView({behavior: 'smooth',block: 'center'});
-	}
-
-	//This is to change the active dot once it is clicked -it is inspired by code on w3schools- 
-	var navigation = document.getElementById("dots");
-	var allDots = navigation.getElementsByClassName("dot");
-	for (var i = 0; i < allDots.length; i++) {
-	  allDots[i].addEventListener("click", function() {
-	  var thisDot = document.getElementsByClassName("activeDot");
-	  thisDot[0].className = thisDot[0].className.replace(" activeDot", "");
-	  this.className += " activeDot";
-	  });
-	}
-
-</script>
-
-
-	
+	<script src="script.js"></script>
 </body>
 </html>
